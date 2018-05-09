@@ -1,0 +1,48 @@
+{
+  "name": "pepelats",
+  "description": "A Vue.js project",
+  "version": "1.0.0",
+  "author": "karine <kitana.91@mail.ru>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "heroku-postbuild": "npm run build",
+    "dev": "cross-env NODE_ENV=development PORT=5000 nodemon --config nodemon.json --watch server --exec babel-node server/index.js",
+    "start": "cross-env PORT=5000 & babel-node server/index.js",
+    "build": "webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "compression-webpack-plugin": "^1.1.11",
+    "connect-history-api-fallback": "^1.5.0",
+    "express": "^4.16.3",
+    "stylus": "^0.54.5",
+    "vue": "^2.5.16"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.4",
+    "nodemon": "^1.17.4",
+    "stylus-loader": "^3.0.2",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0",
+    "webpack-dev-middleware": "^2.0.6",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-hot-middleware": "^2.22.1"
+  }
+}
