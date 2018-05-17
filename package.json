@@ -5,6 +5,9 @@
   "author": "karine <kitana.91@mail.ru>",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node":  "6.11.1"
+  },  
   "scripts": {
     "heroku-postbuild": "npm run build",
     "dev": "cross-env NODE_ENV=development PORT=5000 nodemon --config nodemon.json --watch server --exec babel-node server/index.js",
