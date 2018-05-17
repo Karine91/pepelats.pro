@@ -1,9 +1,9 @@
 import  index from '../pages/index'
 import vuejs from '../pages/vuejs'
-import vuejs from '../pages/auth'
-import vuejs from '../pages/cpp'
-import vuejs from '../pages/js'
-import vuejs from '../pages/linux'
+import auth from '../pages/auth'
+import cpp from '../pages/cpp'
+import js from '../pages/js'
+import linux from '../pages/linux'
 
 export const routes = [
     { path: '/', component: index},
