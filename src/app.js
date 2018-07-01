@@ -1,16 +1,25 @@
-import Vue from 'vue'
-import App from './App.vue'
-import VueRouter from 'vue-router'
-import { routes } from './system/routes'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import App from './App.vue';
+import VueNotifications from 'vue-notifications';
+import options from './system/vueNotifications';
+import { sync } from 'vuex-router-sync';
+import { routes } from './system/routes';
+import store from './store';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+Vue.use(VueNotifications, options);
 
 export const router = new VueRouter({
-  mode: 'history',
-  routes
-})
+	mode: 'history',
+	routes
+});
+
+sync(store, router);
+
 new Vue({
-  el: '#app',
-  router,
-  render: h => h(App)
-})
+	el: '#app',
+	store,
+	router,
+	render: h => h(App)
+});
