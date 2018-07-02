@@ -3,7 +3,8 @@
         "browser": true,
         "commonjs": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "jasmine": true
     },
     "root": true,
     "extends": ["plugin:vue-libs/recommended"],
